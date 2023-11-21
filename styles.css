@@ -481,6 +481,31 @@ body::-webkit-scrollbar-track {
     height: 80vh;
 }
 
+.search-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-block;    
+  }
+
+  .search-icon:hover {
+    cursor: pointer;
+  }
+  
+  /* You can add additional styles for the SVG path if needed */
+  .search-icon svg {
+    fill: #000; /* Change the fill color as desired */
+  }
+  
+  #searchInput {
+    display: none;
+    border-radius: 10px 0px 0px 10px; 
+    border: 2px solid #000; /* Border color */
+    outline: none; /* Remove default outline */
+  }
+  .position-container {
+    position: relative;
+    height: 100%;
+  }
 @keyframes fade-in-grow {
     0% {
         opacity: 0;
@@ -684,9 +709,7 @@ body::-webkit-scrollbar-track {
 
     }
 
-    .share {
-        top: 200px;
-    }
+    
     .expanded-nav {
         width: 100%;
         max-width: 99%;
@@ -793,7 +816,7 @@ body::-webkit-scrollbar-track {
 
 .position-container {
     position: relative;
-    height: 80%;
+    height: 100%;
   }
   
   .svg-container {

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/Fonts.css">
+    <link rel="icon" type="image/x-icon" href="../static/img/Logo-Black.png">
+    <script src="../script.js"></script>
+    <title>Pencil Idea</title>
+</head>
+<body class="body">
+    <header>
+        <div class="overlay">
+            <ul class="overlay-links">
+                <li ><a href="#"onclick="jumpTo(this)" class="orange-links">Home</a></li>
+                <li><a href="#" onclick="jumpTo(this)" class="orange-links">About</a></li>
+                <li><a href="#" onclick="jumpTo(this)" class="orange-links">Services</a></li>
+                <li><a href="#" onclick="jumpTo(this)" class="orange-links">Contact</a></li>
+                <li>
+                    <svg id="return-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="orange">
+                        <path d="M20 11H7.414l3.293-3.293a1 1 0 1 0-1.414-1.414l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414-1.414L7.414 13H20a1 1 0 0 0 0-2z"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+        <div class="expanded-nav">
+            <div class="row" >
+                <div class="col cont">
+                    <div class="row logo-col">
+                        <div class="col">
+                            <div class="logo">
+                                <a href="https://www.pencilidea.com/"><img class="logo-size" src="../static/img/Logo-Black.png"></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <nav>
+                                <ul class="nav-links">
+                                    <li><a href="https://www.pencilidea.com/">Home</a></li>
+                                    <li><a href="#" onclick="jumpTo(this)">About</a></li>
+                                    <li><a href="#" onclick="jumpTo(this)">Services</a></li>
+                                    <li><a href="#" onclick="jumpTo(this)">Samples</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col search-col">
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="Search..." id="searchInput" >
+                        <div class="search-icon" onclick="showSearch()" >
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M16.537 15.374l4.618 4.617a.75.75 0 0 1-1.06 1.06l-4.617-4.617a8 8 0 1 1 1.06-1.06zm-1.077-1.077a6.5 6.5 0 1 0-9.193-9.193 6.5 6.5 0 0 0 9.193 9.193z"
+                                fill="#000"
+                              />
+                            </svg>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="black-projects">
+        <h1 style="text-align: center; color:#FF7700; font-size: 120px; padding-bottom: 50px;"> MOTION GRAPHICS </h1>
+        
+        <div class="works-container">
+            <div class="grid-item">
+                <img src="../static/img/Artboard 1.jpg" alt="Brochures">
+                <!-- <h6>Brochures</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/Artboard 2.jpg" alt="Logo">
+                <!-- <h6>Logo</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/Editor-01.jpg" alt="Web Design">
+                <!-- <h6>Web Design</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/Hossein Dehlavi-Logo.jpg" alt="Motion Graphic">
+                <!-- <h6>Motion Graphic</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/Kavak-01.jpg" alt="Catalog">
+                <!-- <h6>Catalog</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="../static/img/Molana-Logo.jpg" alt="Poster">
+                <!-- <h6>Poster</h6> -->
+            </div>
+        </div>
+    </div>
+    <div class="Footer">
+        <div class="position-container">
+            <div class="all-buttons-media"> 
+                <div class="share">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+                <div class="one">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="two">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="three">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+            <div class="svg-container" >
+                <object class="drawing" type="image/svg+xml" data="../static/svg/Arow-03.svg" width="200" height="200"></object>
+            </div>
+        </div>
+        <p class="copyright">All right reserved by PencilIdea © 2023</p>
+        <p class="copyright">Designed by <a href="https:\\www.kurtpeynabard.com" target="_blank" style="color: orangered">Kurt Peynabard</a></p>
+    </div>
+</body>

@@ -11,18 +11,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../static/Fonts.css">
+    <link rel="icon" type="image/x-icon" href="../static/img/Logo-Black.png">
 
     <script src="../script.js"></script>
-    <title>Responsive Navbar</title>
+    <title>Pencil Idea</title>
 </head>
 <body class="body">
     <header>
         <div class="overlay">
             <ul class="overlay-links">
-                <li ><a href="#" class="orange-links">Home</a></li>
-                <li><a href="#" class="orange-links">About</a></li>
-                <li><a href="#" class="orange-links">Services</a></li>
-                <li><a href="#" class="orange-links">Contact</a></li>
+                <li ><a href="#"onclick="jumpTo(this)" class="orange-links">Home</a></li>
+                <li><a href="#" onclick="jumpTo(this)" class="orange-links">About</a></li>
+                <li><a href="#" onclick="jumpTo(this)" class="orange-links">Services</a></li>
+                <li><a href="#" onclick="jumpTo(this)" class="orange-links">Contact</a></li>
                 <li>
                     <svg id="return-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="orange">
                         <path d="M20 11H7.414l3.293-3.293a1 1 0 1 0-1.414-1.414l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414-1.414L7.414 13H20a1 1 0 0 0 0-2z"/>
@@ -36,16 +37,16 @@
                     <div class="row logo-col">
                         <div class="col">
                             <div class="logo">
-                                <a href="#"><img class="logo-size" src="rand.png"></a>
+                                <a href="https://www.pencilidea.com/"><img class="logo-size" src="../static/img/Logo-Black.png"></a>
                             </div>
                         </div>
                         <div class="col">
                             <nav>
                                 <ul class="nav-links">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="https://www.pencilidea.com/">Home</a></li>
+                                    <li><a href="#" onclick="jumpTo(this)">About</a></li>
+                                    <li><a href="#" onclick="jumpTo(this)">Services</a></li>
+                                    <li><a href="#" onclick="jumpTo(this)">Samples</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -58,7 +59,23 @@
                         <div class="bar"></div>
                     </div>
                     <div class="search">
-                        <button class="btn btn-primary search-button">Search</button>
+                        <input type="text" placeholder="Search..." id="searchInput" >
+                        <div class="search-icon" onclick="showSearch()" >
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M16.537 15.374l4.618 4.617a.75.75 0 0 1-1.06 1.06l-4.617-4.617a8 8 0 1 1 1.06-1.06zm-1.077-1.077a6.5 6.5 0 1 0-9.193-9.193 6.5 6.5 0 0 0 9.193 9.193z"
+                                fill="#000"
+                              />
+                            </svg>
+                          </div>
                     </div>
                 </div>
             </div>

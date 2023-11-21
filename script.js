@@ -279,11 +279,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set the position of the .svg-container
     switch (true) {
-        case screen.width>1200:
+        case screen.width>1400:
             leftValue = 38;
             break;
+        case screen.width>1200:
+            leftValue = 36;
+            break;
         case screen.width>800:
-            leftValue = 30;
+            leftValue = 22;
             break;
         case screen.width>600:
             leftValue = 20;
@@ -295,27 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
     svgContainer.style.left = (leftValue + '%') ;
     svgContainer.style.top = ((svgPositionTop - currDrawingHeight) + 'px');
-        
-    // while (!drawing) {
-    //     try {
-    //         // Calculate the position based on the .share element's position
-    //         const shareRect = shareElement.getBoundingClientRect();
-    //         const svgPositionLeft = shareRect.left - 2;
-    //         const svgPositionTop = shareRect.top - 2;
-            
-    //         const currDrawingWidth = drawing.width['animVal']['value'];
-    //         const currDrawingHeight = drawing.height['animVal']['value'];
     
-    //         console.log(currDrawingWidth/screen.width)
-    
-    //         // Set the position of the .svg-container
-    //         svgContainer.style.left = ((49.5 - 29) + '%') ;
-    //         svgContainer.style.top = ((330 - (currDrawingHeight)) + 'px');
-    //     } catch {
-    //         console.log('WTF')
-    //     }
-    //     let drawing = document.querySelector('.drawing');
-    // }
   });
   
 
@@ -326,7 +309,45 @@ function scrollDown() {
 window.addEventListener('load', setContainerMaxWidth);
 window.addEventListener('resize', setContainerMaxWidth);
 
+function jumpTo(element) {
+    if (['Brochures','Logo','WebDesign','MotionGraphic','Catalog','Poster'].includes(element)) {
+        const newWindow = window.open('https://www.pencilidea.com/'+element, '_blank'); 
+        return;
+    }
+    const currentURL = window.location.href;
+    const targetURL = 'https://www.pencilidea.com/';
+    const targetText = (element.innerText || element.textContent).toLowerCase();
+    if (currentURL != targetURL) {
+        const newWindow = window.open('https://www.pencilidea.com/', '_blank'); 
+        newWindow.onload = () => {
+            const aboutDiv = newWindow.document.getElementById(targetText);
+            if (aboutDiv) {
+                aboutDiv.scrollIntoView({
+                  behavior: 'smooth', // Optional: adds smooth scrolling behavior
+                  block: 'start' // Scrolls the top of the element to the top of the window
+                });
+            }
+        }
+    } else {
+        var element = document.getElementById(targetText);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
 
+}
+
+function showSearch() {
+    if (document.getElementById('searchInput').style.display != 'block')
+    {   
+        document.querySelector('.search-icon').style.border= '2px solid #000';
+        document.querySelector('.search-icon').style.borderRadius ='0 10px 10px 0px'; 
+        document.querySelector('.search-icon').style.backgroundColor ='#FF7700'; 
+        document.querySelector('.search-icon').style.padding ='1px'; 
+        document.getElementById('searchInput').style.display = 'block';
+    }
+    
+}
 
 // <<<<------------------------->>>>
 document.addEventListener('DOMContentLoaded', function() {
@@ -365,9 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
         observer.unobserve(entry.target);
-      } else {
-        entry.classList.remove('active');
-      }
+      } 
     });
   }, observerOptions);
 
