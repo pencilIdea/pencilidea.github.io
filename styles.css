@@ -1,0 +1,931 @@
+.body {
+    background-color: #444;
+
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    
+  }
+  
+  body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FF7700;
+  }
+
+.container {
+    max-width: 1700px;
+    /* Set your desired maximum width */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border-radius: 0px 0px 50px 0px ; */
+}
+
+.works-container {
+    max-width: fit-content;
+    /* Set your desired maximum width */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding-bottom: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 4.5px;
+    grid-template-columns: repeat(3, 1fr);
+    /* Set 3 columns */
+    grid-auto-rows: minmax(0, auto);
+    /* grid-template-rows: 39.5ch 39.5ch ;
+    grid-auto-flow: column; */
+    /* border-radius: 0px 0px 50px 0px ; */
+}
+
+.boxed-margin {
+    border-top: #FF7700 2px;
+}
+
+.black {
+    max-width: 1700px;
+    /* Set your desired maximum width */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 50px 0px;
+    height: 100vh;
+}
+
+.black-projects {
+    max-width: 1700px;
+    /* Set your desired maximum width */
+    margin: 0 auto;
+    margin-bottom: 50px;
+    /* Center the container horizontally */
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 50px 0px;
+    height: fit-content;
+
+}
+
+.software-section {
+    height: fit-content;
+    background-color: #fff;
+}
+
+.custom-div {
+    background: linear-gradient(to bottom, #444, #444 5%, #eee 7%);
+    height: 100vh;
+    /* 100% of the viewport height */
+}
+
+.cont {
+    background-color: #f0f0f0;
+}
+
+.second-container {
+    background-color: #f0f0f0;
+    background-image: url('Line-01.png');
+    background-repeat: no-repeat;
+    background-size: 123%;
+    height: fit-content;
+}
+
+.logo-col {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.logo-size {
+    width: 30px;
+    height: 30px;
+}
+
+
+.search-col {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align the navigation links to the end */
+}
+
+.nav-links li {
+    margin: 0 20px;
+    color: #FF7700;
+
+}
+
+.nav-links a {
+    color: #FF7700;
+}
+
+.orange-links {
+    color: #FF7700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* Apply the scale transform on hover */
+.orange-links:hover {
+    transform: scale(1.1);
+    /* Adjust the scale factor as needed */
+    color: #FF7700;
+}
+
+.hamburger-menu {
+    align-items: end;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    background-color: #FF7700;
+    height: 3px;
+    width: 30px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.93);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.overlay-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.overlay-links li {
+    margin: 20px 0;
+    color: #FF7700;
+
+}
+
+/* Display the overlay with animation */
+.overlay.active {
+    display: flex;
+    animation: roll-in-menu 0.5s forwards;
+}
+
+.scroll-icon {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    /* Adjust the position as needed */
+    left: 50%;
+    font-size: 30px;
+    color: #FF7700;
+    /* Adjust the color as needed */
+    cursor: pointer;
+}
+
+/* CSS for the smooth scrolling effect */
+.scrolling {
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease-in-out;
+}
+
+.overlay.roll-out {
+    animation: roll-out-menu 0.5s forwards;
+}
+
+/* Style the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 50px;
+
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-test {
+    position: absolute;
+    left: 40%;
+    width: 59%;
+    height: 59%;
+    margin-top: 20px;
+}
+
+.large-first-letter::first-letter {
+    font-size: 2em;
+    /* Adjust the size as needed */
+    font-weight: bold;
+    /* If you want it to be bold */
+    float: left;
+    /* To make it appear as a drop cap */
+    margin-right: 1px;
+    /* Adjust the spacing as needed */
+    line-height: 0.3;
+}
+
+.large-first-letter {
+    font-size: 24px;
+    /* text-align: justify; */
+}
+
+.boxed-container {
+    color: #FF7700;
+    padding: 20px;
+    text-align: center;
+}
+
+.boxed-container-tools {
+    color: #FF7700;
+    padding: 20px;
+    text-align: center;
+}
+
+.boxed-container h1 {
+    font-size: 71px;
+    text-align: start;
+}
+
+.boxed-container-tools h4 {
+    color: #FF7700;
+    font-size: 62px;
+    text-align: start;
+}
+
+
+
+.boxed-container .row {
+    display: flex;
+    /* Use Flexbox */
+    align-items: center;
+    /* Vertically align content */
+    justify-content: center;
+    /* Horizontally align content */
+}
+
+.boxed-container .col {
+    flex: 1;
+    /* Equal width columns */
+}
+
+.boxed-container h4 {
+    font-size: 120px;
+    font-weight: 300;
+    margin: -50px 10px 10px 0px;
+    flex: 1;
+    /* Make h4 column smaller */
+    text-align: start;
+}
+
+
+/* Additional styles for the paragraph inside the boxed-margin */
+.boxed-margin p {
+    font-size: 35px;
+    /* Adjust font size as needed */
+    line-height: 1.5;
+    /* Adjust line height as needed */
+    text-align: start;
+    margin-left: 10ch;
+    margin-right: 10ch;
+    
+}
+
+.added-padding {
+    padding: 10ch 20px 20px 20px;
+}
+
+.row-second-row .dual-col {
+    margin-top: 10vh;
+    padding-left: 15ch;
+    padding-right: 15ch;
+    /* text-align: justify; */
+}
+
+.grid-item {
+    background-color: #FF7700;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateX(0);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.grid-item img:hover {
+    transform: scale(1.2);
+    /* Scale the element by 10% on hover */
+}
+
+.grid-item img {
+    max-width: 300px;
+    max-height: 300px;
+    transition: transform 0.5s;
+}
+
+
+.mobile-intro::first-letter {
+    font-size: 2em;
+    /* Adjust the size as needed */
+    font-weight: bold;
+    /* If you want it to be bold */
+    float: left;
+    /* To make it appear as a drop cap */
+    margin-right: 1px;
+    /* Adjust the spacing as needed */
+    line-height: 10px;
+}
+
+.mobile-intro {
+
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.mobile-icons {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    /* Horizontally center the carousel within its container */
+}
+
+.mobile-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    /* Horizontally center the carousel within its container */
+    height: fit-content;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: fit-content;
+    /* Ensure the container takes the full width */
+    margin-right: 50px;
+    margin-left: -100px;
+}
+
+.carousel-slide {
+    transition: opacity 0.5s;
+    /* Add a fade transition */
+    opacity: 1;
+}
+
+.carousel-slide.fade-out {
+    opacity: 0.2;
+    /* Apply fade out transition to items going out */
+}
+
+.icon-mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    /* Adjust the icon size as needed */
+    height: 100px;
+}
+
+.ic-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cls-1 {
+    stroke-width: 0px;
+}
+
+.cls-1,
+.cls-2 {
+    fill: #fff;
+    font-family: 'YourCustomFont', sans-serif;
+    /* Use the custom font family */
+    font-size: 12px;
+}
+
+
+.Footer {
+    height: 50vh;
+}
+
+.Footer-sub {
+    background-color: #f0f0f0;
+
+}
+
+.copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+    top: 400px;
+}
+
+.padded-list {
+    padding-top: 25px;
+}
+
+#container {
+    height: 80vh;
+}
+
+@keyframes fade-in-grow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes roll-in-menu {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes roll-out-menu {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1181px) {
+
+    .container {
+        max-width: 1700px;
+        /* Set your desired maximum width */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        padding-top: 22px;
+        padding-left: 10px;
+        padding-right: 10px;
+        /* border-radius: 0px 0px 20px 0px ; */
+    }
+
+    .large-first-letter {
+        font-size: 20px;
+    }
+
+    .works-container {
+        grid-template-columns: repeat(3, 1fr);
+        width: fit-content;
+    }
+
+    .grid-item img {
+        max-width: 300px;
+        max-height: 300px;
+        transition: transform 0.5s;
+    }
+
+    .desktop-icons {
+        display: block;
+    }
+
+    .boxed-container-tools h1 {
+        font-size: xx-large;
+        color: #FF7700;
+    }
+
+    .mobile-icons {
+        display: none;
+    }
+
+    .boxed-container-tools h1 {
+        font-size: 45px;
+    }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 861px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .menu-overlay {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .container {
+        max-width: 1700px;
+        /* Set your desired maximum width */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        padding-top: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        /* border-radius: 0px 0px 20px 0px ; */
+
+    }
+
+    .row-second-row .dual-col {
+        margin-top: 10vh;
+        padding-left: 6ch;
+        padding-right: 6ch;
+        text-align: justify;
+    }
+
+    .img-test {
+        position: absolute;
+        left: 30%;
+        width: 70%;
+        height: 30%;
+    }
+
+    .boxed-margin p {
+        font-size: 16px;
+        /* Adjust font size as needed */
+        line-height: 1.5;
+        /* Adjust line height as needed */
+        text-align: start;
+        margin-left: 10ch;
+        margin-right: 10ch;
+    }
+
+    .scroll-icon {
+        display: none;
+    }
+
+    .mobile-intro {
+        text-align: start;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 55%;
+    }
+
+    .large-first-letter {
+        display: none;
+    }
+
+
+    .works-container {
+        width: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .black-projects {
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 0.5s;
+    }
+
+    .desktop-icons {
+        display: none;
+    }
+
+    .mobile-icons {
+        display: block !important;
+        position: relative;
+
+    }
+
+    .share {
+        top: 200px;
+    }
+    .expanded-nav {
+        width: 100%;
+        max-width: 99%;
+        padding-left: 10px;
+        padding-right: 11px;
+
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 1700px;
+        /* Set your desired maximum width */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        padding-top: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0px 0px 20px 0px;
+    }
+
+    .img-test {
+        position: absolute;
+        left: 30%;
+        width: 70%;
+        height: 20%;
+    }
+
+    .row-second-row .dual-col {
+        margin-top: 10vh;
+        padding-left: 3ch;
+        padding-right: 3ch;
+        text-align: justify;
+    }
+
+    .boxed-margin p {
+        font-weight: 400;
+        font-size: 20px;
+        /* Adjust font size as needed */
+        line-height: 1.5;
+        /* Adjust line height as needed */
+        /* text-align: justify; */
+        margin-left: 2ch;
+        margin-right: 2ch;
+    }
+
+    .black {
+        height: 100vh;
+    }
+
+    .added-padding {
+        padding: 100px 20px 20px 20px;
+    }
+
+    .large-first-letter {
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .mobile-intro {
+        display: block;
+        margin-top: 65%;
+    }
+
+    .second-container {
+        height: 150ch;
+    }
+
+    .works-container {
+        width: fit-content;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-item img {
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 0.5s;
+    }
+
+    .black-projects {
+        height: fit-content;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .desktop-icons {
+        display: none;
+    }
+
+    .boxed-container h4 {
+        font-size: 80px;
+        margin: -20px 10px 10px 0px;
+        
+    }
+
+}
+
+@media (min-width: 862px) {
+    .mobile-intro {
+        display: none;
+    }
+}
+
+.position-container {
+    position: relative;
+    height: 80%;
+  }
+  
+  .svg-container {
+    position: absolute;
+    top: -2%; /* 2% above */
+    left: -2%; /* 2% to the left */
+    z-index: -1;
+  }
+
+.share {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FF7700;
+    position: relative;
+    top: 300px;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    overflow: hidden;
+    line-height: 65px;
+    font-size: 1.5em;
+    color: #fff;
+    -moz-box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+    border-radius: 50px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.share:hover {
+    cursor: pointer;
+}
+
+.one,
+.two,
+.three {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: -55px;
+    text-align: center;
+    line-height: 49px;
+    font-size: 1.5em;
+    padding: 12px;
+    top: 300px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, .2);
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, .2);
+    -webkit-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+.one:hover,
+.two:hover,
+.three:hover {
+    cursor: pointer;
+}
+
+.one i,
+.two i,
+.three i {
+    display: block;
+}
+
+
+.one {
+    background: #2196f3;
+}
+
+.two {
+    background: rgb(98, 98, 134);
+}
+
+.three {
+    background: rgb(246, 121, 121);
+}
+
+
+.floating-icons {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.icon {
+    position: absolute;
+    padding: 100px;
+    font-size: 2em;
+    transition: transform 0.2s;
+    /* Add a transition for smoother animation */
+}
+
+.ic-image {
+    width: 80px;
+    height: 80px;
+}
+
+
+.expanded-nav {
+    width: 100%;
+    max-width: 99%;
+    padding-left: 10px;
+
+}
+
+.slide-down-animation {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(-20px);
+  }
+  
+.slide-right-animation {
+opacity: 0;
+transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+transform: translateX(-20px);
+}
+
+
+.fade-in-grow {
+    opacity: 0; /* Initially invisible */
+    transform: scale(.5); /* Initially small size */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out ; /* Transition properties */
+    transition-delay: 0.5s; 
+}
+  
+  .fade-in-grow.active {
+    opacity: 1; /* Visible */
+    transform: scale(1); /* Full size */
+  }

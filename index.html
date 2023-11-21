@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/Fonts.css">
+
+    <script src="script.js"></script>
+    <title>Responsive Navbar</title>
+</head>
+<body class="body">
+    <header>
+        <div class="overlay">
+            <ul class="overlay-links">
+                <li ><a href="#" class="orange-links">Home</a></li>
+                <li><a href="#" class="orange-links">About</a></li>
+                <li><a href="#" class="orange-links">Services</a></li>
+                <li><a href="#" class="orange-links">Contact</a></li>
+                <li>
+                    <svg id="return-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="orange">
+                        <path d="M20 11H7.414l3.293-3.293a1 1 0 1 0-1.414-1.414l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414-1.414L7.414 13H20a1 1 0 0 0 0-2z"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+        <div class="container custom-div">
+            <div class="row" >
+                <div class="col cont">
+                    <div class="row logo-col">
+                        <div class="col">
+                            <div class="logo">
+                                <a href="#"><img class="logo-size" src="rand.png"></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <nav>
+                                <ul class="nav-links">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col search-col">
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="search">
+                        <button class="btn btn-primary search-button">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-left: 20px;">
+                <div class="col col-md-3 col-md-4" style="margin-top:5%;">
+                    <p class="large-first-letter">
+                        Welcome to Pencil idea Graphic Design Company, where creativity meets innovation to
+                         transform your visual ideas into captivating realities. At Pencil idea Graphic Design,
+                          we are passionate about the power of design and committed to delivering high-quality, 
+                          tailored graphic solutions for our diverse clientele. Whether you're a small business looking 
+                          to establish a strong brand identity or a large corporation in need of dynamic marketing materials
+                          , we have the expertise and creativity to meet your every design need.
+                    </p>
+                </div>
+                <img class="img-test" src="testing.jpeg">
+            </div>
+            <div>
+                <p class="mobile-intro">
+                    Welcome to Pencil idea Graphic Design Company, where creativity meets innovation to
+                     transform your visual ideas into captivating realities. At Pencil idea Graphic Design,
+                      we are passionate about the power of design and committed to delivering high-quality, 
+                      tailored graphic solutions for our diverse clientele. Whether you're a small business looking 
+                      to establish a strong brand identity or a large corporation in need of dynamic marketing materials
+                      , we have the expertise and creativity to meet your every design need.
+                </p>
+            </div>
+            <div class="scroll-icon" style="z-index: 500;" onclick="scrollDown()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32.6" height="72.63" viewBox="0 0 32.6 72.63">
+                    <path fill="#000000" d="M32.56,15.9A15.57,15.57,0,0,0,21.23.8C20.15.51,19,1,17.93,0H14.34c-1.25,1-2.53.57-3.75.94A15.21,15.21,0,0,0,0,14.8c0,.31.08.69.08,1V38.85c0,.37-.1.73-.07,1.1A14.76,14.76,0,0,0,5.7,51c4.67,3.71,10,4.08,15.51,2.76a14.83,14.83,0,0,0,11.29-14C32.67,31.83,32.57,23.87,32.56,15.9Zm-3.5,24.16c-.13,5.72-5.46,10.71-11.2,10.89-2.58.08-5.18.18-7.59-1C5.5,47.65,3.13,43.61,3.09,38.33c0-3.72,0-7.33,0-11.33h.08c0-4-.13-8.2,0-12.38A11.77,11.77,0,0,1,13.84,3.77C17,3.49,20.16,3.6,23,5.27a11.61,11.61,0,0,1,6.14,10.4C29.21,23.79,29.24,31.94,29.06,40.06Z"/>
+                    <path fill="#000000" d="M16,68.76,9.42,62.51c0,.94,0,2.07,0,3.21a.92.92,0,0,0,.2.59c2.19,2.15,4.4,4.29,6.51,6.33,2.07-2,4.22-4.09,6.36-6.18a1.06,1.06,0,0,0,.34-.63c0-1.18,0-2.36,0-3.52Z"/>
+                    <path fill="#FFA500" d="M17.82,10.61c0-1.18-.67-1.9-1.63-1.94a1.74,1.74,0,0,0-1.73,1.93q-.05,3.53,0,7.07c0,1.25.67,2,1.68,2s1.65-.71,1.69-2,0-2.33,0-3.49S17.85,11.8,17.82,10.61Z"/>
+                </svg>
+                <p style="font-size: 10px; color: black;">click to scroll</p>
+            </div>
+        </div>
+    </header>
+    <div class="black">
+        <div class="boxed-container">
+            <h1 class="text-start slide-down-animation">ABOUT</h1>
+            <h4 class="slide-right-animation" style="font-weight: 200;">US</h4>
+            <br>
+            <div class="boxed-margin">
+                <p class="fade-in-grow">
+                    Pencil idea Graphic Design is a dynamic and forward-thinking graphic design company that brings together a team of talented designers, artists, and creatives. With years of experience in the industry, our professionals have a deep understanding of design principles, current trends, and the latest tools and software to turn your vision into stunning visual assets.
+                </p>    
+            </div>
+        </div>
+    </div>
+    <div class="second-container">
+        <div class="added-padding">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center slide-down-animation">Our Services</h1>
+                </div>
+            </div>
+            <div class="row row-second-row" >
+                <div class="dual-col col-md-6 col-12 col-sm-6" id="dual-col1">
+                    <ul>
+                        <li class="slide-right-animation padded-list"><span class="bold-text">Logo and Branding:</span> We create distinctive logos and branding materials that tell your story, evoke emotions, and establish a memorable brand identity.</li>
+                        <li class="slide-right-animation padded-list"><span class="bold-text">Web Design:</span> Our web design experts craft responsive, user-friendly websites that not only look stunning but also deliver a seamless online experience for your visitors.</li>
+                        <li class="slide-right-animation padded-list"><span class="bold-text">Print Design:</span> From eye-catching brochures to business cards and posters, we design print materials that leave a lasting impression and communicate your message effectively.</li>
+                    </ul>
+                </div>
+                <div class="dual-col col-md-6 col-12 col-sm-6" id="dual-col2">
+                    <ul>
+                        <li class="slide-right-animation padded-list"><span class="bold-text">Digital Illustration:</span> Our skilled digital artists bring your ideas to life with custom illustrations for various purposes, including book covers, advertisements, and editorial content.</li>
+                        <li class="slide-right-animation padded-list"><span class="bold-text">Motion Graphics:</span> We produce captivating animated visuals that add depth and engagement to your video content, presentations, and advertisements.</li>
+                        <li class="slide-right-animation padded-list"><span class="bold-text">Infographics:</span> Our designers create informative and visually appealing infographics, making complex information easy to understand and engaging for your audience.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="black-projects">
+        <div class="works-container">
+            <div class="grid-item">
+                <img src="static/img/Brochure-B.png" alt="Brochures">
+                <!-- <h6>Brochures</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="static/img/Logo-B.png" alt="Logo">
+                <!-- <h6>Logo</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="static/img/Web Design-B.png" alt="Web Design">
+                <!-- <h6>Web Design</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="static/img/Motion Graphic-B.png" alt="Motion Graphic">
+                <!-- <h6>Motion Graphic</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="static/img/Catalog-B.png" alt="Catalog">
+                <!-- <h6>Catalog</h6> -->
+            </div>
+            <div class="grid-item">
+                <img src="static/img/Poster-B.png" alt="Poster">
+                <!-- <h6>Poster</h6> -->
+            </div>
+        </div>
+    </div>
+    <div class="software-section" >
+            <div class="boxed-container-tools">
+                <h4>Tools</h4>
+            </div>
+            <div class="desktop-icons">
+                <div id="container"></div>
+
+                <!-- <div class="floating-icons">
+                    <div class="icon"><img class="ic-image" src="static/img/InDesign.png" alt="Adobe InDesign"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Photoshop.png" alt="Photoshop"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/After Effects.png" alt="After Effects"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Premire.png" alt="Premiere Pro"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Illustrator.png" alt="Illustrator"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Animate.png" alt="Animate"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Media Encoder.png" alt="Media Encoder"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Bridge.png" alt="Adobe Bridge"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Zbrush.png" alt="ZBrush"></div>
+                    <div class="icon"><img class="ic-image" src="static/img/Cinema 4D.png" alt="Cinema 4D"></div>
+                </div>  -->
+            </div>        
+            <div class="mobile-icons">
+                <div class="mobile-icons-grid">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/InDesign.png" alt="Adobe InDesign"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/Photoshop.png" alt="Photoshop"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/After Effects.png" alt="After Effects"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/Premire.png" alt="Premiere Pro"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/Illustrator.png" alt="Illustrator"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/Animate.png" alt="Animate"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/Media Encoder.png" alt="Media Encoder"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon-mob"><img class="ic-image" src="static/img/Bridge.png" alt="Adobe Bridge"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="Footer">
+        <div class="position-container">
+            <div class="all-buttons-media"> 
+                <div class="share">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+                <div class="one">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="two">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="three">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+            <div class="svg-container" >
+                <object class="drawing" type="image/svg+xml" data="static/svg/Arow-03.svg" width="200" height="200"></object>
+            </div>
+        </div>
+        <p class="copyright">All right reserved by PencilIdea © 2023</p>
+        <p class="copyright">Designed by <a href="https:\\www.kurtpeynabard.com" target="_blank" style="color: orangered">Kurt Peynabard</a></p>
+    </div>
+</body>
+</html>
