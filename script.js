@@ -510,8 +510,8 @@ anychart.onDocumentReady(function () {
   
     // set the stroke of nodes
     nodes.normal().stroke(null);
-    nodes.hovered().stroke("#FF7700", 4);
-    nodes.selected().stroke("#FF7700", 4);
+    nodes.hovered().stroke("#FF7700", 2);
+    nodes.selected().stroke("#FF7700", 2);
   
     chart.edges().stroke("#FF7700", 2);
     chart.edges().hovered().stroke("#FF7700", 3);
