@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     const gridItems = document.querySelectorAll('.grid-item');
+    const smapleGridItems = document.querySelectorAll('.sample-grid-item');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -90,12 +91,23 @@ document.addEventListener('DOMContentLoaded', function () {
          })
     }
 
+    if (checkScreenWidth()) {
+        smapleGridItems.forEach(elem => {
+           elem.style.transform = "scale(0.01);"
+        })
+   }
+
     gridItems.forEach((item, index) => {
         item.style.animation = 'none'; // Disable the animation initially
         item.classList.add(index % 2 === 0 ? 'even' : 'odd');
         observer.observe(item);
     });
 
+    smapleGridItems.forEach((item, index) => {
+        item.style.animation = 'none'; // Disable the animation initially
+        item.classList.add(index % 2 === 0 ? 'even' : 'odd');
+        observer.observe(item);
+    });
 
     var flag = 0;
     var shareButton = document.querySelector('.share');
@@ -422,65 +434,9 @@ anychart.onDocumentReady(function () {
             { id: "Cinema4D", fill: { src: "static/img/Cinema 4D.png" }, height: 80, x: 1000, y: 1000 },
             // { id: "MT", fill: {src:"static/img/Logo-Black.png"}, height: 100}
             { id: "Our Team", fill: {src:"rand.png"}, height: 100}
-
           ],
-    //   edges: [
-    //     { from: "InDesign", to: "Photoshop" },
-    //     { from: "InDesign", to: "AfterEffects" },
-    //     { from: "InDesign", to: "Premiere" },
-    //     { from: "InDesign", to: "Illustrator" },
-    //     { from: "InDesign", to: "Animate" },
-    //     { from: "InDesign", to: "MediaEncoder" },
-    //     { from: "InDesign", to: "Bridge" },
-    //     { from: "InDesign", to: "Zbrush" },
-    //     { from: "InDesign", to: "Cinema4D" },
-  
-    //     { from: "Photoshop", to: "AfterEffects" },
-    //     { from: "Photoshop", to: "Premiere" },
-    //     { from: "Photoshop", to: "Illustrator" },
-    //     { from: "Photoshop", to: "Animate" },
-    //     { from: "Photoshop", to: "MediaEncoder" },
-    //     { from: "Photoshop", to: "Bridge" },
-    //     { from: "Photoshop", to: "Zbrush" },
-    //     { from: "Photoshop", to: "Cinema4D" },
-  
-    //     { from: "AfterEffects", to: "Premiere" },
-    //     { from: "AfterEffects", to: "Illustrator" },
-    //     { from: "AfterEffects", to: "Animate" },
-    //     { from: "AfterEffects", to: "MediaEncoder" },
-    //     { from: "AfterEffects", to: "Bridge" },
-    //     { from: "AfterEffects", to: "Zbrush" },
-    //     { from: "AfterEffects", to: "Cinema4D" },
-  
-    //     { from: "Premiere", to: "Illustrator" },
-    //     { from: "Premiere", to: "Animate" },
-    //     { from: "Premiere", to: "MediaEncoder" },
-    //     { from: "Premiere", to: "Bridge" },
-    //     { from: "Premiere", to: "Zbrush" },
-    //     { from: "Premiere", to: "Cinema4D" },
-  
-    //     { from: "Illustrator", to: "Animate" },
-    //     { from: "Illustrator", to: "MediaEncoder" },
-    //     { from: "Illustrator", to: "Bridge" },
-    //     { from: "Illustrator", to: "Zbrush" },
-    //     { from: "Illustrator", to: "Cinema4D" },
-  
-    //     { from: "Animate", to: "MediaEncoder" },
-    //     { from: "Animate", to: "Bridge" },
-    //     { from: "Animate", to: "Zbrush" },
-    //     { from: "Animate", to: "Cinema4D" },
-  
-    //     { from: "MediaEncoder", to: "Bridge" },
-    //     { from: "MediaEncoder", to: "Zbrush" },
-    //     { from: "MediaEncoder", to: "Cinema4D" },
-  
-    //     { from: "Bridge", to: "Zbrush" },
-    //     { from: "Bridge", to: "Cinema4D" },
-  
-    //     { from: "Zbrush", to: "Cinema4D" }
-    //   ]
+    
     edges: [
-        
         { from: "Our Team", to: "Photoshop" },
         { from: "Our Team", to: "AfterEffects" },
         { from: "Our Team", to: "Premiere" },
